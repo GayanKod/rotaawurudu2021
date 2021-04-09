@@ -3,6 +3,7 @@ import './App.css';
 import{BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import SignUp from "./components/SignUp/Register";
 import Activate from "./components/SignUp/Activate";
+import Login from "./components/SignIn/Login";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Route path='/SignUp' exact render={props => <SignUp {...props} />} />
       <Route path='/users/activate/:token' exact render={props => <Activate {...props} />} />
+      <Route path='/SignIn' exact render = {props => <Login {...props} />} />
     </Router>
     </div>
   );
