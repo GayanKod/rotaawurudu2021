@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import authSvg from '../assets/img/reset.svg';
+import authSvg from '../../assests/reset.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 require("dotenv").config();
-const dotenv = require("dotenv");
 
 const ResetPassword = ({match}) => {
   const [formData, setFormData] = useState({

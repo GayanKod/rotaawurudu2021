@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import { MenuItems } from "./MenuItems"
 import "./Navbar.css"
 import { Button } from "../Button"
+import { Link } from 'react-router-dom';
+import logo from "../../assests/cast4logof.png"
 
 function Navbar() {
 
     const [clicked, setClicked] = useState(false);
 
-
-
     return (
         <nav className="NavbarItems">
-            <h1 className="navbar-logo">
-                Cast 4 Aurudu
-            </h1>
+            <Link  to="/">
+            <img className="navbar-logo" src={logo} alt="" />
+            </Link>
             <div className="menu-icon" onClick={
                 () => setClicked(!clicked)
             }>
@@ -32,7 +32,9 @@ function Navbar() {
                 }
 
             </ul>
+            <Link to="/SignIn">
             <Button>Sign in</Button>
+            </Link>
 
         </nav >
     )
