@@ -104,27 +104,60 @@ const Register = () => {
                   onChange={handleChange('email')}
                   value={email}
                 />
-                <input
+                {/*<input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white mt-5'
                   type='text'
                   placeholder='Batch'
                   onChange={handleChange('batch')}
                   value={batch}
-                />
-                <input
+                />*/}
+                <select 
+                value={batch} 
+                className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white mt-5'
+                onChange={handleChange('batch')}>
+                <option>--Select the batch--</option>
+                <option value="batch-16">Batch 16</option>
+                <option value="batch-17">Batch 17</option>
+                <option value="batch-18">Batch 18</option>
+                <option value="batch-19">Batch 19</option>
+                <option value="batch-20">Batch 20</option>
+                </select>
+                {/*<input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white mt-5'
                   type='text'
                   placeholder='Faculty'
                   onChange={handleChange('faculty')}
                   value={faculty}
-                />
-                <input
+                />*/}
+                <select 
+                value={faculty} 
+                className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white mt-5'
+                onChange={handleChange('faculty')}>
+                <option>--Select your faculty--</option>
+                <option value="ITFac">IT Faculty</option>
+                <option value="Efac">Engineering Faculty</option>
+                <option value="Archi">Architechture Faculty</option>
+                <option value="Business">Business Faculty</option>
+                <option value="Medical">Medical Faculty</option>
+                <option value="NDT">NDT</option>
+                </select>
+                {/*<input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white mt-5'
                   type='text'
                   placeholder='House'
                   onChange={handleChange('house')}
                   value={house}
-                />
+                />*/}
+                <select 
+                value={house} 
+                className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white mt-5'
+                onChange={handleChange('house')}>
+                <option>--Select your house--</option>
+                <option value="Grejoy">Grejoy</option>
+                <option value="Targerion">Targerion</option>
+                <option value="Baratheon">Baratheon</option>
+                <option value="Starks">Starks</option>
+                </select>
                 <input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white mt-5'
                   type='password'
