@@ -16,7 +16,6 @@ function LissanaGasaStart(){
         />
         <Helmet>
                 <meta charSet="utf-8" />
-                <title>Lissana Gaha</title>
                 <script src="LGScript.js" type="text/javascript" />
         </Helmet>
             <body class="LGbody" onload="startGame()">
