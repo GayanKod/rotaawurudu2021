@@ -3,10 +3,9 @@ import 'react-slideshow-image/dist/styles.css'
 import Cover from "../assests/cover.png";
 import Aubo from "../assests/ayubo.png";
 import "tailwindcss/tailwind.css"
-import "./Welcome.css"
+import Footer from "./Footer";
 
 function Welcome(){
-    let currentYear = new Date().getFullYear();
 
     return(
         <div>
@@ -19,9 +18,7 @@ function Welcome(){
 
             <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
             </div>
-            <footer>
-                <p>Copyright {currentYear} © Rotaract Mora</p>
-            </footer>
+            <Footer />
 
             {/*Mobile*/}
         

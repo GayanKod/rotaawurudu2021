@@ -8,7 +8,6 @@ function Home() {
   return (
     <div className="home">
       <div className="home__container">
-
         <Link to="/kana-muttiya">
         <div className="home__item">
           <div className="home__item__image">
@@ -59,10 +58,9 @@ function Home() {
           <div className="home__item__image">
             <img src={GamePic} alt="" />
           </div>
-          <div className="home__item__title"><p>Kotta Pora</p></div>
+          <div className="home__item__title"><p>Kotta Pora </p></div>
         </div>
         </Link>
-   
       </div>
     </div>
   );
