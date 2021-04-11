@@ -27,44 +27,46 @@ import kottaPora from "./components/KottaPora/KottaPora";
 import kottaPoraPractice from "./components/KottaPora/KottaPoraPractice";
 import kottaPoraStart from "./components/KottaPora/KottaPoraStart";
 
+import PrivateRoute from "./Routes/PrivateRoute";
+import PublicRoute from "./Routes/PublicRoute";
+
 function App() {
   return (
     <div className="App">
     <Router>
-      <Navbar />
-      <Route path='/SignUp' exact render={props => <SignUp {...props} />} />
+      <Route restricted={true} path='/SignUp' exact render={props => <SignUp {...props} />} />
       <Route path='/users/activate/:token' exact render={props => <Activate {...props} />} />
-      <Route path='/SignIn' exact render = {props => <Login {...props} />} />
+      <Route restricted={true} path='/SignIn' exact render = {props => <Login {...props} />} />
       <Route path='/users/password/forget' exact render={props => <ForgetPassword {...props} />} />
       <Route path='/users/password/reset/:token' exact render={props => <ResetPassword {...props} />} />
-      <Route path='/home' exact component={Home}/>
+      <PrivateRoute path='/home' exact component={Home}/>
 
-      <Route path='/kana-muttiya' exact component={KanaMuttiya}/>
-      <Route path='/kana-muttiya/start' exact component={KanaMuttiyaStart}/>
-      <Route path='/kana-muttiya/practice' exact component={KanaMuttiyaPractice}/>
+      <PrivateRoute path='/kana-muttiya' exact component={KanaMuttiya}/>
+      <PrivateRoute path='/kana-muttiya/start' exact component={KanaMuttiyaStart}/>
+      <PrivateRoute path='/kana-muttiya/practice' exact component={KanaMuttiyaPractice}/>
 
-      <Route path='/lissana-gasa' exact component={LissanaGasa}/>
-      <Route path='/lissana-gasa/start' exact component={LissanaGasaStart}/>
-      <Route path='/lissana-gasa/practice' exact component={LissanaGasaPractice}/>
+      <PrivateRoute path='/lissana-gasa' exact component={LissanaGasa}/>
+      <PrivateRoute path='/lissana-gasa/start' exact component={LissanaGasaStart}/>
+      <PrivateRoute path='/lissana-gasa/practice' exact component={LissanaGasaPractice}/>
 
-      <Route path='/gama-haraha-diwima' exact component={GamaHarahaDiwima}/>
-      <Route path='/gama-haraha-diwima/start' exact component={GamaHarahaDiwimaStart}/>
-      <Route path='/gama-haraha-diwima/practice' exact component={GamaHarahaDiwimaPractice}/>
+      <PrivateRoute path='/gama-haraha-diwima' exact component={GamaHarahaDiwima}/>
+      <PrivateRoute path='/gama-haraha-diwima/start' exact component={GamaHarahaDiwimaStart}/>
+      <PrivateRoute path='/gama-haraha-diwima/practice' exact component={GamaHarahaDiwimaPractice}/>
 
-      <Route path='/aliyata-asa-thabima' exact component={AliyataAsaThabima}/>
-      <Route path='/aliyata-asa-thabima/start' exact component={AliyataAsaThabimaStart}/>
-      <Route path='/aliyata-asa-thabima/practice' exact component={AliyataAsaThabimaPractice}/>
+      <PrivateRoute path='/aliyata-asa-thabima' exact component={AliyataAsaThabima}/>
+      <PrivateRoute path='/aliyata-asa-thabima/start' exact component={AliyataAsaThabimaStart}/>
+      <PrivateRoute path='/aliyata-asa-thabima/practice' exact component={AliyataAsaThabimaPractice}/>
 
-      <Route path='/balloon-pipirima' exact component={balloonPipirima}/>
-      <Route path='/balloon-pipirima/start' exact component={balloonPipirimaStart}/>
-      <Route path='/balloon-pipirima/practice' exact component={balloonPipirimaPractice}/>
+      <PrivateRoute path='/balloon-pipirima' exact component={balloonPipirima}/>
+      <PrivateRoute path='/balloon-pipirima/start' exact component={balloonPipirimaStart}/>
+      <PrivateRoute path='/balloon-pipirima/practice' exact component={balloonPipirimaPractice}/>
 
-      <Route path='/kotta-pora' exact component={kottaPora}/>
-      <Route path='/kotta-pora/start' exact component={kottaPoraStart}/>
-      <Route path='/kotta-pora/practice' exact component={kottaPoraPractice}/>
+      <PrivateRoute path='/kotta-pora' exact component={kottaPora}/>
+      <PrivateRoute path='/kotta-pora/start' exact component={kottaPoraStart}/>
+      <PrivateRoute path='/kotta-pora/practice' exact component={kottaPoraPractice}/>
 
 
-      <Route path='/' exact component={Welcome}/>
+      <PublicRoute restricted={true} path='/' exact component={Welcome}/>
     </Router>
     </div>
   );

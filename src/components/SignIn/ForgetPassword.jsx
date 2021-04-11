@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import authSvg from '../../assests/forget.svg';
+import authSvg from '../../assests/forget.png';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
+import Navbar from "../Navbar/Navbar";
 require("dotenv").config();
+
 
 const ForgetPassword = ({history}) => {
   const [formData, setFormData] = useState({
@@ -18,7 +20,7 @@ const ForgetPassword = ({history}) => {
     if (email) {
       setFormData({ ...formData, textChange: 'Submitting' });
       axios
-        .put(`${process.env.REACT_APP_API_URL}/forgotpassword`, {
+        .put(`http://localhost:5000/api/forgotpassword`, {
           email
         })
         .then(res => {
@@ -39,6 +41,8 @@ const ForgetPassword = ({history}) => {
     }
   };
   return (
+    <>
+    <Navbar />
     <div className='min-h-screen bg-yellow-100 text-gray-900 flex justify-center'>
       <ToastContainer />
       <div className='max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1'>
@@ -80,6 +84,7 @@ const ForgetPassword = ({history}) => {
       </div>
       ;
     </div>
+    </>
   );
 };
 

@@ -2,10 +2,13 @@ import React from "react";
 import "./Home.scss";
 import GamePic from "../../assests/BG_Sample.jpg"
 import { Link } from 'react-router-dom';
+import SNavBar from "../Navbar/SignOutNavbar";
 
 
 function Home() {
   return (
+    <>
+    <SNavBar/>
     <div className="home">
       <div className="home__container">
         <Link to="/kana-muttiya">
@@ -63,6 +66,7 @@ function Home() {
         </Link>
       </div>
     </div>
+    </>
   );
 }
 

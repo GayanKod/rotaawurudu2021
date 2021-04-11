@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { authenticate, isAuth } from '../../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
+import Navbar from "../Navbar/Navbar";
 //import { GoogleLogin } from 'react-google-login';
 //import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 require("dotenv").config();
@@ -105,6 +106,7 @@ const Login = ({ history }) => {
   };
   return (
     <>
+    <Navbar />
     <div className='min-h-screen bg-yellow-100 text-gray-900 flex justify-center'>
       {isAuth() ? <Redirect to='/' /> : null}
       <ToastContainer />

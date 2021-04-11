@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { authenticate, isAuth } from '../../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
+import Navbar from "../Navbar/Navbar";
 require("dotenv").config();
 
 const Register = () => {
@@ -28,7 +29,7 @@ const Register = () => {
       if (password1 === password2) {
         setFormData({ ...formData, textChange: 'Submitting' });
         axios
-          .post(`${process.env.REACT_APP_API_URL}/register`, {
+          .post(`http://localhost:5000/api/register`, {
             name,
             email,
             batch,
@@ -75,6 +76,8 @@ const Register = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className='min-h-screen bg-yellow-100 text-gray-900 flex justify-center'>
       {isAuth() ? <Redirect to='/' /> : null}
       <ToastContainer />
@@ -206,8 +209,8 @@ const Register = () => {
           ></div>
         </div>
       </div>
-      ;
     </div>
+    </>
   );
 };
 

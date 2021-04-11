@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import GameSubNav from "../GameSubNav";
 import "./lissanagasa.css";
 import {Helmet} from "react-helmet";
+import SNavBar from "../Navbar/SignOutNavbar";
 
 function LissanaGasaStart(){
 
@@ -10,6 +11,7 @@ function LissanaGasaStart(){
 
     return(
         <>
+        <SNavBar/>
         <GameSubNav
             name="Lissana Gaha Nagima"
             back="/lissana-gasa"

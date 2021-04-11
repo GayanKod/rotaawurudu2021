@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import authSvg from '../../assests/reset.svg';
+import authSvg from '../../assests/reset.png';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
+import Navbar from "../Navbar/Navbar";
 require("dotenv").config();
 
 const ResetPassword = ({match}) => {
@@ -29,7 +30,7 @@ const ResetPassword = ({match}) => {
     if ((password1 === password2) && password1 && password2) {
       setFormData({ ...formData, textChange: 'Submitting' });
       axios
-        .put(`${process.env.REACT_APP_API_URL}/resetpassword`, {
+        .put(`http://localhost:5000/api/resetpassword`, {
             newPassword: password1,
             resetPasswordLink: token
         })
@@ -51,7 +52,9 @@ const ResetPassword = ({match}) => {
     }
   };
   return (
-    <div className='min-h-screen bg-gray-100 text-gray-900 flex justify-center'>
+    <>
+    <Navbar />
+    <div className='min-h-screen bg-yellow-100 text-gray-900 flex justify-center'>
       <ToastContainer />
       <div className='max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1'>
         <div className='lg:w-1/2 xl:w-5/12 p-6 sm:p-12'>
@@ -59,21 +62,21 @@ const ResetPassword = ({match}) => {
             <h1 className='text-2xl xl:text-3xl font-extrabold'>
               Reset Your Password
             </h1>
-            <div className='w-full flex-1 mt-8 text-indigo-500'>
+            <div className='w-full flex-1 mt-8 text-yellow-500'>
               
               <form
                 className='mx-auto max-w-xs relative '
                 onSubmit={handleSubmit}
               >
                 <input
-                  className='w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white'
+                  className='w-full px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white'
                   type='password'
                   placeholder='password'
                   onChange={handleChange('password1')}
                   value={password1}
                   />
                   <input
-                  className='w-full mt-5 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white'
+                  className='w-full mt-5 px-8 py-4 rounded-lg font-medium bg-yellow-100 border border-yellow-200 placeholder-yellow-500 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white'
                   type='password'
                   placeholder='Confirm password'
                   onChange={handleChange('password2')}
@@ -81,7 +84,7 @@ const ResetPassword = ({match}) => {
                 />
                 <button
                   type='submit'
-                  className='mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
+                  className='mt-5 tracking-wide font-semibold bg-gray-800 text-gray-100 w-full py-4 rounded-lg hover:bg-yellow-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
                 >
                   <i className='fas fa-sign-in-alt  w-6  -ml-2' />
                   <span className='ml-3'>Submit</span>
@@ -90,15 +93,15 @@ const ResetPassword = ({match}) => {
             </div>
           </div>
         </div>
-        <div className='flex-1 bg-indigo-100 text-center hidden lg:flex'>
+        <div className='flex-1 bg-yellow-200 text-center hidden lg:flex'>
           <div
             className='m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat'
             style={{ backgroundImage: `url(${authSvg})` }}
           ></div>
         </div>
       </div>
-      ;
     </div>
+    </>
   );
 };
 

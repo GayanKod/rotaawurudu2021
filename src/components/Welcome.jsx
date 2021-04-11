@@ -4,10 +4,13 @@ import Cover from "../assests/cover.png";
 import Aubo from "../assests/ayubo.png";
 import "tailwindcss/tailwind.css"
 import Footer from "./Footer";
+import Navbar from "./Navbar/Navbar";
 
 function Welcome(){
 
     return(
+        <>
+        <Navbar />
         <div>
         <div class="relative bg-gray-200 overflow-hidden">
         <div class="max-w-7xl bg-gray-200 mx-auto">
@@ -44,6 +47,7 @@ function Welcome(){
         </div>
         </div>
 </div>
+</>
     );
 }
 
