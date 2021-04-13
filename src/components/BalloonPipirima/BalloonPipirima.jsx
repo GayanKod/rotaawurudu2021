@@ -4,17 +4,17 @@ import Balloon from "../../assests/BG_Sample.jpg";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 
-function balloonPipirima(){
+function balloonPipirima() {
 
-    return(
+    return (
         <>
-        <SNavBar/>
-        <Game
-            imgsrc={Balloon}
-            name="Balloon Pipirima"
-            practice="balloon-pipirima/practice"
-            Start="balloon-pipirima/start"
-        />
+            <SNavBar />
+            <Game
+                imgsrc={Balloon}
+                name="Balloon Pipirima"
+                practice="games/balloon/?practice=true"
+                Start="games/balloon/"
+            />
         </>
     );
 }

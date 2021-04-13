@@ -4,17 +4,17 @@ import LissanaGaha from "../../assests/BG_Sample.jpg";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 
-function LissanaGasa(){
+function LissanaGasa() {
 
-    return(
+    return (
         <>
-        <SNavBar/>
-        <Game
-            imgsrc={LissanaGaha}
-            name="Lissana Gaha Nagima"
-            practice="lissana-gasa/practice"
-            Start="lissana-gasa/start"
-        />
+            <SNavBar />
+            <Game
+                imgsrc={LissanaGaha}
+                name="Lissana Gaha Nagima"
+                practice="/games/lissana-gaha/?practice=true"
+                Start="/games/lissana-gaha/"
+            />
         </>
     );
 }

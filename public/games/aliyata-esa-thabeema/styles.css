@@ -1,0 +1,8 @@
+body{
+    text-align: center;
+    background-color:wheat;
+}
+canvas {
+    border: 1px solid #d3d3d3;
+    background-image: url("elephant.jpg");
+}

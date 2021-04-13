@@ -18,8 +18,8 @@ var initialSpeed = 50;
 var debug = false;
 var font = 'PressStart2P';
 var fontFactor = 0.5;
+
 var practice = false;
-var saved = false;
 var url = 'http://localhost:5000/api/user/score/update';
 
 var goals = [
@@ -396,7 +396,7 @@ async function draw() {
             try {
                 const user = JSON.parse(localStorage.getItem('user'));
                 const token = document.cookie.match(new RegExp('(^| )token=([^;]+)'))[2];
-                console.log(user, token);
+
                 const res = await (await fetch(url, {
                     method: 'PUT',
                     mode: 'cors',

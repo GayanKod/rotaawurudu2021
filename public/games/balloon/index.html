@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p>&nbsp;</p>
+                    <h2 class="text-center">Balloon Pipirima</h2>
+
+                    <div id="balloon" v-bind:style="{ width: health+10>100? '100%' : health+10+'%'}" v-on:click="punch" v-bind:class="{burst: ended}" title="Click Here To fill The Balloon"></div>
+
+                    <div id="health">
+                        <div v-bind:style="{ width: health+'%'}"></div>
+                    </div>
+
+                    <div id="timer" class="text-center">
+                        <label>Time : {{ seconds }} s</label>
+                    </div>
+
+                    <hr>
+                    <div id="difficulty" class="text-center">
+                        <label class="radio-inline">
+                            <input type="radio" v-model="level" value="5" title="Regeration 5+" checked>Low
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" v-model="level" value="8" title="Regeration 8+">Medium
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" v-model="level" value="13" title="Regeration 13+">High
+                        </label>
+                    </div>
+                    <hr>
+
+                    <div id="controls">
+                        <button v-on:click="start" v-show="!ended" class="btn btn-success">Start</button>
+                        <button v-on:click="restart" class="btn btn-danger">Restart</button>
+                    </div>
+
+                    <div id="audio">
+                        <audio ref="audio" volume="1" preload="auto">
+                            <source src="pop.mp3">
+                        </audio>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</html>
