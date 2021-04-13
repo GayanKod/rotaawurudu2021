@@ -4,17 +4,17 @@ import GamaHaraha from "../../assests/BG_Sample.jpg";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 
-function gamaHaraha(){
+function gamaHaraha() {
 
-    return(
+    return (
         <>
-        <SNavBar/>
-        <Game
-            imgsrc={GamaHaraha}
-            name="Gama Haraha Diwima"
-            practice="gama-haraha-diwima/practice"
-            Start="gama-haraha-diwima/start"
-        />
+            <SNavBar />
+            <Game
+                imgsrc={GamaHaraha}
+                name="Gama Haraha Diwima"
+                practice="/games/gama-haraha/?practice=true"
+                Start="/games/gama-haraha/"
+            />
         </>
     );
 }

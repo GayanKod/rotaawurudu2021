@@ -12,15 +12,10 @@ function Navbar() {
     return (
         <nav className="NavbarItems">
             <Link  to="/">
-            <img className="navbar-logo" src={logo} alt="" />
+                <img className="navbar-logo" src={logo} alt="" />
             </Link>
-            <div className="menu-icon" onClick={
-                () => setClicked(!clicked)
-            }>
-                <i className={
-                    clicked ? "fas fa-times" : "fas fa-bars"
-                }></i>
-
+            <div className="menu-icon" onClick={() => setClicked(!clicked)}>
+                <i className={clicked ? "fas fa-times" : "fas fa-bars" }></i>
             </div>
             <ul className={clicked ? "nav-menu-active" : "nav-menu"}>
                 {
@@ -33,9 +28,8 @@ function Navbar() {
 
             </ul>
             <Link to="/SignIn">
-            <Button>Sign in</Button>
+                <Button>Sign in</Button>
             </Link>
-
         </nav >
     )
 }

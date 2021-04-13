@@ -1,21 +1,18 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import GameSubNav from "../GameSubNav";
 import SNavBar from "../Navbar/SignOutNavbar";
+import Script from 'react-load-script'
+import { Redirect } from "react-router";
 
-function gamaHarahaStart(){
-    
-    return(
-        <>
-        <SNavBar/>
-        <GameSubNav
-            name="Gama Haraha Diwima"
-            back="/gama-haraha-diwima"
-        />
-        </>
-    );
+function GamaHarahaStart() {
+    useEffect(() => {
+        window.location.href = '/games/gama-haraha/'
+    }, [])
+
+    return (<></>);
 
 }
 
 
-export default gamaHarahaStart;
+export default GamaHarahaStart;
