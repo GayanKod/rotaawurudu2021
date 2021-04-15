@@ -3,7 +3,7 @@
     font-weight: bolder;
 }
 
-#balloon {
+div[title="Click Here To fill The Balloon"] {
     height: 60vh;
     margin: 0 auto;
     background: url(Balloonnew.png) center no-repeat;
@@ -11,7 +11,7 @@
     background-size: contain;
 }
 
-#balloon.burst {
+div[title="Click Here To fill The Balloon"].burst {
     background: url(pop.png) center no-repeat;
 }
 

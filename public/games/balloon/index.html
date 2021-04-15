@@ -19,7 +19,7 @@
                     <p>&nbsp;</p>
                     <h2 class="text-center">Balloon Pipirima</h2>
 
-                    <div id="balloon" v-bind:style="{ width: health+10>100? '100%' : health+10+'%'}" v-on:click="punch" v-bind:class="{burst: ended}" title="Click Here To fill The Balloon"></div>
+                    <div v-bind:style="{ width: health+10>100? '100%' : health+10+'%'}" v-on:click="punch" v-bind:class="{burst: ended}" title="Click Here To fill The Balloon"></div>
 
                     <div id="health">
                         <div v-bind:style="{ width: health+'%'}"></div>
@@ -32,7 +32,7 @@
                     <hr>
                     <div id="difficulty" class="text-center">
                         <label class="radio-inline">
-                            <input type="radio" v-model="level" value="5" title="Regeration 5+" checked>Low
+                            <input type="radio" v-model="level" value="5" title="Regeration 5+">Low
                         </label>
                         <label class="radio-inline">
                             <input type="radio" v-model="level" value="8" title="Regeration 8+">Medium

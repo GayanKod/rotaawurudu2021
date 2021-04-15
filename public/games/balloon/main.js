@@ -1,3 +1,13 @@
+var practice = false;
+var url = 'http://localhost:5000/api/user/score/update';
+
+const urlParams = new URLSearchParams(window.location.search);
+const practiceParam = urlParams.get('practice');
+
+if (practiceParam === 'true') {
+    practice = true;
+}
+
 var app = new Vue({
     el: "#app",
     data: {
@@ -19,14 +29,39 @@ var app = new Vue({
             }, 750);
             setInterval(function() {
                 self.countTimer();
-            }, 100);
+            }, 10);
         },
-        punch: function() {
+        punch: async function() {
             if (this.started == true && this.health < 100) {
                 this.health += 5;
                 if (this.health >= 100) {
                     this.ended = true;
                     this.$refs.audio.play();
+
+                    if (!practice) {
+                        try {
+                            const user = JSON.parse(localStorage.getItem('user'));
+                            const token = document.cookie.match(new RegExp('(^| )token=([^;]+)'))[2];
+
+                            const res = await (await fetch(url, {
+                                method: 'PUT',
+                                mode: 'cors',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': `Bearer ${token}`
+                                },
+                                body: JSON.stringify({
+                                    _id: user._id,
+                                    game: 'BaloonPipirima',
+                                    score: (this.elapsedTime / 100)
+                                })
+                            })).json();
+
+                            console.log(res);
+                        } catch (err) {
+                            console.log(err);
+                        }
+                    }
                 }
             } else {
                 alert("Game Not Yet Started !");

@@ -4,17 +4,17 @@ import AliyataAsa from "../../assests/BG_Sample.jpg";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 
-function aliyataAsaThabima(){
+function aliyataAsaThabima() {
 
-    return(
+    return (
         <>
-        <SNavBar />
-        <Game
-            imgsrc={AliyataAsa}
-            name="Aliyata Asa Thabima"
-            practice="aliyata-asa-thabima/practice"
-            Start="aliyata-asa-thabima/start"
-        />
+            <SNavBar />
+            <Game
+                imgsrc={AliyataAsa}
+                name="Aliyata Asa Thabima"
+                practice="/games/aliyata-esa-thabeema/?practice=true"
+                Start="/games/aliyata-esa-thabeema/"
+            />
         </>
     );
 }

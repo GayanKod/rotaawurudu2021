@@ -4,17 +4,17 @@ import KanaMuttiya from "../../assests/BG_Sample.jpg";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 
-function kanaMuttiya(){
+function kanaMuttiya() {
 
-    return(
+    return (
         <>
-        <SNavBar/>
-        <Game
-            imgsrc={KanaMuttiya}
-            name="Kana Muttiya Bidima"
-            practice="/kana-muttiya/practice"
-            Start="kana-muttiya/start"
-        />
+            <SNavBar />
+            <Game
+                imgsrc={KanaMuttiya}
+                name="Kana Muttiya Bidima"
+                practice="/games/kana-mutti/?practice=true"
+                Start="/games/kana-mutti/"
+            />
         </>
     );
 }

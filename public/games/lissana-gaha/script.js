@@ -65,7 +65,9 @@ var myGameArea = {
                     body: JSON.stringify({
                         _id: user._id,
                         game: 'LissanaGasa',
-                        score: finalScore
+                        score: finalScore,
+                        time: (time / 1000),
+                        click: clicks
                     })
                 })).json();
 
