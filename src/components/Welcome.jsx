@@ -5,6 +5,7 @@ import Aubo from "../assests/ayubo.png";
 import "tailwindcss/tailwind.css"
 import Footer from "./Footer";
 import Navbar from "./Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 function Welcome() {
 
@@ -34,9 +35,9 @@ function Welcome() {
                                     </h1>
 
                                     <div className="rounded-md shadow">
-                                        <a href="/SignIn" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-900 md:py-4 md:text-lg md:px-10 ">
+                                        <Link href="/SignIn" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-900 md:py-4 md:text-lg md:px-10 ">
                                             Get started
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </main>

@@ -45,7 +45,7 @@ var myGameArea = {
         clearInterval(this.interval);
         clearInterval(this.timer);
 
-        const finalScore = ((6000 / (time / 1000)) + (10000 / clicks)).toFixed(2);
+        const finalScore = parseFloat(((6000 / (time / 1000)) + (10000 / clicks)).toFixed(2));
 
         document.getElementById("restart-btn").style.display = "block";
         document.getElementById("marks").innerText = `Winner\n${clicks} tries in ${(time / 1000)} seconds.\nYou earned ${finalScore} points`;

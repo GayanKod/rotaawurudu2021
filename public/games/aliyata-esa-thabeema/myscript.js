@@ -94,7 +94,7 @@ function component(width, height, color, x, y, type) {
         let distance = Math.sqrt(Math.pow(Math.abs(parseInt(this.x) - 110), 2) + Math.pow(Math.abs(parseInt(this.y) - 130), 2)).toFixed(3);
         document.getElementById("marks").innerText = distance;
 
-        const finalScore = ((600 / (myGameArea.frameNo / 1000)) + (1000 / distance)).toFixed(2);
+        const finalScore = parseFloat(((600 / (myGameArea.frameNo / 1000)) + (1000 / distance)).toFixed(2));
 
         if (!practice) {
             try {
