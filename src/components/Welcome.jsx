@@ -35,7 +35,7 @@ function Welcome() {
                                     </h1>
 
                                     <div className="rounded-md shadow">
-                                        <Link href="/SignIn" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-900 md:py-4 md:text-lg md:px-10 ">
+                                        <Link to="/SignIn" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-900 md:py-4 md:text-lg md:px-10 ">
                                             Get started
                                         </Link>
                                     </div>

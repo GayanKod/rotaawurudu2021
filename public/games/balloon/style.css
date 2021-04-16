@@ -1,6 +1,15 @@
-﻿h2 {
-    font-family: Merriweather, serif;
+﻿body{
+    text-align: center;
+    background-color:wheat;
+    background-image: url(../bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2 {
     font-weight: bolder;
+    color: #fff;
+    background-color: #474224;
 }
 
 div[title="Click Here To fill The Balloon"] {

@@ -11,6 +11,9 @@ html, body {
 	margin: 0;
 	line-height: 1.25em;
 	font-size: 0.9em;
+	background-image: url(../bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .center-helper {
 	height: 100%;

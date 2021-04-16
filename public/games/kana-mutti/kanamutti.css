@@ -5,9 +5,3 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-canvas {
-    border: 1px solid #d3d3d3;
-    background-image: url("elephant.jpg");
-    margin: 0 auto;
-    margin-top: 2%;
-}

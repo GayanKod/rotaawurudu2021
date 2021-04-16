@@ -23,7 +23,7 @@ var practice = false;
 var url = 'http://localhost:5000/api/user/score/update';
 
 var goals = [
-    { name: 'Digital Aurudu', distance: 5000 }
+    { name: 'Cast4 Online Aurudu', distance: 5000 }
     /*{ name: 'Medium', distance: 845 },
     { name: 'Hard', distance: 1471 },
     { name: 'Triglav', distance: 2864 },
@@ -633,7 +633,7 @@ function start() {
 
     if (--counter === 0) {
         showMsg(
-            '<h2>Gama Hara Diwiima</h2>' +
+            '<h2>Gama Haraha Diwiima</h2>' +
             '<br><br><b>High Score <br>' + goalName + '(' + goalDistance + 'm)</b>'
         );
         initialized = true;
