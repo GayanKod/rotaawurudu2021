@@ -30,20 +30,6 @@
                         <label>Time : {{ seconds }} s</label>
                     </div>
 
-                    <hr>
-                    <div id="difficulty" class="text-center">
-                        <label class="radio-inline">
-                            <input type="radio" v-model="level" value="5" title="Regeration 5+">Low
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" v-model="level" value="8" title="Regeration 8+">Medium
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" v-model="level" value="13" title="Regeration 13+">High
-                        </label>
-                    </div>
-                    <hr>
-
                     <div id="controls">
                         <button v-on:click="start" v-show="!ended" class="btn btn-success">Start</button>
                         <button v-on:click="restart" class="btn btn-danger">Restart</button>

@@ -12,7 +12,7 @@ var app = new Vue({
     el: "#app",
     data: {
         health: 0,
-        level: 5,
+        level: 8,
         started: false,
         ended: false,
         startTime: "",
@@ -53,7 +53,7 @@ var app = new Vue({
                                 body: JSON.stringify({
                                     _id: user._id,
                                     game: 'BaloonPipirima',
-                                    score: (this.elapsedTime / 100)
+                                    score: (1000 / (this.elapsedTime / 1000))
                                 })
                             })).json();
 
