@@ -12,6 +12,7 @@ body {
     padding: 0;
     background-color: wheat;
     background-image: url(../bg.jpg);
+    background-size: cover;
 }
 
 button {

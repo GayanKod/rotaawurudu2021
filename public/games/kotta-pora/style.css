@@ -1,5 +1,12 @@
-﻿h2 {
-    font-family: Merriweather, serif;
+﻿body{
+    background-color:wheat;
+    background-image: url(../bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+h2 {
     font-weight: bolder;
 }
 
