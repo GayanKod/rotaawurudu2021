@@ -1,6 +1,6 @@
 import React from "react";
 import Game from "../Game/Game";
-import KanaMuttiya from "../../assests/BG_Sample.jpg";
+import KanaMuttiya from "../../assests/KanaMuttiya.png";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Game from "../Game/Game";
-import GamaHaraha from "../../assests/BG_Sample.jpg";
+import GamaHaraha from "../../assests/GamaHaraha.png";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 

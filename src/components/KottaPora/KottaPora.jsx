@@ -1,6 +1,6 @@
 import React from "react";
 import Game from "../Game/Game";
-import KottaPora from "../../assests/BG_Sample.jpg";
+import KottaPora from "../../assests/KottaPora.png";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 

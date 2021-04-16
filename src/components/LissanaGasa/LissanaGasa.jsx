@@ -1,6 +1,6 @@
 import React from "react";
 import Game from "../Game/Game";
-import LissanaGaha from "../../assests/BG_Sample.jpg";
+import LissanaGaha from "../../assests/LissanaGaha.png";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 

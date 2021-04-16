@@ -1,6 +1,6 @@
 import React from "react";
 import Game from "../Game/Game";
-import AliyataAsa from "../../assests/BG_Sample.jpg";
+import AliyataAsa from "../../assests/AliyataAsaThabima.png";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 

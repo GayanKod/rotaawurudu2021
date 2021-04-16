@@ -1,6 +1,6 @@
 import React from "react";
 import Game from "../Game/Game";
-import Balloon from "../../assests/BG_Sample.jpg";
+import Balloon from "../../assests/Balloon.png";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 
