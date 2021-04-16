@@ -6,20 +6,31 @@
   min-height: 1000px;
   background-color: #FDE68A;
   background-image: url(../../assests/home.jpg);
+
   padding-top: 40px;
   .home__container {
     width: 90%;
     margin: 0px auto;
-
+  
     // background-color: lightgreen;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    &:hover .home__item:not(:hover) {
+      filter: grayscale(100%);
+  
+      &::after {
+        background-color: rgba(#000, 0.5);
+      }
+    }
     .home__item {
       //   background-color: lightcoral;
       width: 350px;
       height: 375px;
       margin: 10px;
+      cursor: pointer;
+      transition: .3s;
 
       .home__item__image {
         width: 100%;
@@ -38,6 +49,7 @@
         height: 75px;
         // background-color: seagreen;
         background-color: $DarkGrey;
+
         @include flexbox;
 
         p {
