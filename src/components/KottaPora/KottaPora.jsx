@@ -4,17 +4,17 @@ import KottaPora from "../../assests/BG_Sample.jpg";
 import SNavBar from "../Navbar/SignOutNavbar";
 
 
-function kottaPora(){
+function kottaPora() {
 
-    return(
+    return (
         <>
-        <SNavBar/>
-        <Game
-            imgsrc={KottaPora}
-            name="Kotta Pora"
-            practice="kotta-pora/practice"
-            Start="kotta-pora/start"
-        />
+            <SNavBar />
+            <Game
+                imgsrc={KottaPora}
+                name="Kotta Pora"
+                practice="/games/kotta-pora/?practice=true"
+                Start="/games/kotta-pora/"
+            />
         </>
     );
 }
