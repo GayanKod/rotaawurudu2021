@@ -91,10 +91,18 @@ function component(width, height, color, x, y, type) {
         ctx.arc(this.x, this.y + 20, 4, 0, 2 * Math.PI);
         ctx.arc(110, 130, 8, 0, 2 * Math.PI);
 
-        let distance = Math.sqrt(Math.pow(Math.abs(parseInt(this.x) - 110), 2) + Math.pow(Math.abs(parseInt(this.y) - 130), 2)).toFixed(3);
-        document.getElementById("marks").innerText = distance;
+        let distanceStr = Math.sqrt(Math.pow(Math.abs(parseInt(this.x) - 110), 2) + Math.pow(Math.abs(parseInt(this.y) - 130), 2)).toFixed(3);
+        document.getElementById("marks").innerText = distanceStr;
 
-        const finalScore = parseFloat(((600 / (myGameArea.frameNo / 1000)) + (1000 / distance)).toFixed(2));
+        const distance = parseFloat(distanceStr);
+
+        const finalScore = parseFloat((10000 / distance).toFixed(4));
+
+        ctx.fillStyle = "#FF0000";
+        ctx.strokeStyle = "#6b0700";
+        ctx.fill();
+        ctx.stroke();
+        timer.update();
 
         if (!practice) {
             try {
@@ -122,13 +130,6 @@ function component(width, height, color, x, y, type) {
                 console.log(err);
             }
         }
-
-        ctx.fillStyle = "#FF0000";
-        ctx.strokeStyle = "#6b0700";
-        ctx.fill();
-        ctx.stroke();
-        timer.update();
-
     }
 
     this.newPos = function() {

@@ -204,7 +204,7 @@ function clickEventListner(event) {
                 muttiArr[i] = mutti_a;
 
                 //=========================Score algorithm===========================
-                oldscore = (100 / (time / 1000)) + scoreArr[i];
+                oldscore = (100 / ((time / 1000) + 10)) + scoreArr[i];
                 if (score < oldscore)
                     score = oldscore;
 

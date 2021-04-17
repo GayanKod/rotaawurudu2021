@@ -2,6 +2,7 @@ import React from "react";
 import Game from "../Game/Game";
 import LissanaGaha from "../../assests/LissanaGaha.png";
 import SNavBar from "../Navbar/SignOutNavbar";
+import LeaderBoard from "../LeaderBoard/LeaderBoard";
 
 
 function LissanaGasa() {
@@ -15,6 +16,7 @@ function LissanaGasa() {
                 practice="/games/lissana-gaha/?practice=true"
                 Start="/games/lissana-gaha/"
             />
+            <LeaderBoard game="LissanaGasa" />
         </>
     );
 }

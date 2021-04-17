@@ -2,6 +2,7 @@ import React from "react";
 import Game from "../Game/Game";
 import KanaMuttiya from "../../assests/KanaMuttiya.png";
 import SNavBar from "../Navbar/SignOutNavbar";
+import LeaderBoard from "../LeaderBoard/LeaderBoard";
 
 
 function kanaMuttiya() {
@@ -15,6 +16,7 @@ function kanaMuttiya() {
                 practice="/games/kana-mutti/?practice=true"
                 Start="/games/kana-mutti/"
             />
+            <LeaderBoard game="kanaMuttiya" />
         </>
     );
 }
