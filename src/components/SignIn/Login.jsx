@@ -23,7 +23,7 @@ const Login = ({ history }) => {
 
   /*const sendGoogleToken = tokenId => {
     axios
-      .post(`http://localhost:5000/api/googlelogin`, {
+      .post(`https://rotaractmora.org/awurudu-backend/api/googlelogin`, {
         idToken: tokenId
       })
       .then(res => {
@@ -44,7 +44,7 @@ const Login = ({ history }) => {
 
   /*const sendFacebookToken = (userID, accessToken) => {
     axios
-      .post(`http://localhost:5000/api/facebooklogin`, {
+      .post(`https://rotaractmora.org/awurudu-backend/api/facebooklogin`, {
         userID,
         accessToken
       })
@@ -67,12 +67,12 @@ const Login = ({ history }) => {
   };*/
 
   const handleSubmit = e => {
-    console.log('http://localhost:5000/api');
+    console.log('https://rotaractmora.org/awurudu-backend/api');
     e.preventDefault();
     if (email && password1) {
       setFormData({ ...formData, textChange: 'Submitting' });
       axios
-        .post(`http://localhost:5000/api/login`, {
+        .post(`https://rotaractmora.org/awurudu-backend/api/login`, {
           email,
           password: password1
         })

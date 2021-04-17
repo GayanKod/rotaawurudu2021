@@ -31,7 +31,7 @@ const Activate = ({ match }) => {
     e.preventDefault();
 
     axios
-      .post(`http://localhost:5000/api/activation`, {
+      .post(`https://rotaractmora.org/awurudu-backend/api/activation`, {
         token
       })
       .then(res => {

@@ -17,7 +17,7 @@ var win = false,
     startScore = 5;
 
 var practice = false;
-var url = 'http://localhost:5000/api/user/score/update';
+var url = 'https://rotaractmora.org/awurudu-backend/api/user/score/update';
 
 canvas.width = 1000;
 canvas.height = 720;

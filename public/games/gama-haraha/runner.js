@@ -20,7 +20,7 @@ var font = 'PressStart2P';
 var fontFactor = 0.5;
 
 var practice = false;
-var url = 'http://localhost:5000/api/user/score/update';
+var url = 'https://rotaractmora.org/awurudu-backend/api/user/score/update';
 
 var goals = [
     { name: 'Cast4 Online Aurudu', distance: 5000 }

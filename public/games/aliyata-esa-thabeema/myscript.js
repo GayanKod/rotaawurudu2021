@@ -5,7 +5,7 @@ var count = 0;
 var counter = 0;
 
 var practice = false;
-var url = 'http://localhost:5000/api/user/score/update';
+var url = 'https://rotaractmora.org/awurudu-backend/api/user/score/update';
 
 function startGame() {
     myGamePiece = new component(20, 20, "pen.png", 10, 120, "image");
