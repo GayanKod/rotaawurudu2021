@@ -330,7 +330,6 @@ function drawGameGrid() {
 
             if (player.y <= 1.5) {
                 win = true;
-                paused = true;
             }
         }
 
